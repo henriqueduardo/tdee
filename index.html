@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora TDEE - Gasto diário</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="hero-bg">
+      <div class="hero-content">
+        <h1 class="title">Calculadora TDEE</h1>
+        <form action="" class="form-bg">
+          <div class="border-form">
+            <div class="tdee-content">
+              <div class="col-1">
+                <div class="input-container">
+                  <label for="weight">Peso em KG</label>
+                  <input type="text" name="weight" value="" />
+                </div>
+                <div class="input-container">
+                  <label for="height">Altura em CM</label>
+                  <input type="number" name="height" value="" />
+                </div>
+                <div class="input-container">
+                  <label for="age">Idade</label>
+                  <input type="number" name="age" value="" />
+                </div>
+                <button class="btn-result" type="submit">calcular</button>
+                <button class="btn-reset" type="reset">limpar</button>
+              </div>
+              <div class="col-2">
+                <div class="radio-container">
+                  <input
+                    type="radio"
+                    class="radio-input"
+                    name="sex"
+                    id="radio-m"
+                    value="M"
+                  />
+                  <label class="radio-image" for="radio-m">
+                    <img src="images/man_2922721.png" alt="Masculino" />
+                  </label>
+                  <input
+                    type="radio"
+                    class="radio-input"
+                    name="sex"
+                    id="radio-f"
+                    value="F"
+                  />
+                  <label class="radio-image" for="radio-f">
+                    <img src="images/woman_2922579.png" alt="Feminino" />
+                  </label>
+                </div>
+                <label for="options">Objetivo</label>
+                <select id="options">
+                  <option value="">Emagrecer</option>
+                  <option value="">Manter peso</option>
+                  <option value="">Ganhar peso</option>
+                </select>
+                <label for="options">Nível de atividade física</label>
+                <select id="options">
+                  <option value="">Sedentário</option>
+                  <option value="">Levemente ativo</option>
+                  <option value="">Moderamente ativo</option>
+                  <option value="">Muito ativo</option>
+                  <option value="">Extremamente ativo</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
