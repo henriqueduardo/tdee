@@ -1,0 +1,150 @@
+.hero-bg {
+  height: 600px;
+  width: 100%;
+}
+
+.hero-content {
+  padding-top: 175px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  color: #212121;
+}
+
+.hero-text h1 {
+  font-size: 58px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  color: #4f4d52;
+  font-size: 18px;
+  width: 550px;
+}
+
+.form-bg {
+  width: 550px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  border: 2px solid #3b38ad;
+  box-shadow: 0 0 0 20px #f9f9f9;
+}
+
+.tdee-content {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.col-1 {
+  width: 45%;
+}
+.col-2 {
+  width: 45%;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+input {
+  padding: 6px 12px;
+  background: #fff;
+  color: black;
+  outline: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s;
+}
+
+#options,
+#activity {
+  padding: 6px 12px;
+  background: #fff;
+  color: black;
+  width: 100%;
+  outline: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-image {
+  display: inline-block;
+  width: 100%;
+  height: 100px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+.radio-input {
+  display: none;
+}
+
+.radio-input:checked + .radio-image {
+  background: #d8cdf5;
+  border-color: #3f51b5;
+  box-shadow: 0 0 10px rgba(63, 81, 181, 0.5);
+}
+
+.radio-image:hover {
+  background: #d8cdf5;
+  border-color: #3f51b5;
+  box-shadow: 0 0 10px rgba(63, 81, 181, 0.5);
+}
+
+label img {
+  padding: 20px;
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+
+.btn-result {
+  background-color: #3f51b5;
+  border: 2px solid #3f51b5;
+  padding: 6px 12px;
+  outline: none;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.btn-reset {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid red;
+  padding: 6px 12px;
+  outline: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: red;
+  border-radius: 4px;
+}

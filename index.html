@@ -5,70 +5,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora TDEE - Gasto diário</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
   </head>
   <body>
     <main class="hero-bg">
-      <div class="hero-content">
-        <h1 class="title">Calculadora TDEE</h1>
+      <div class="hero-content container">
+        <div class="hero-text">
+          <h1>Calculadora TDEE</h1>
+          <p>
+            TDEE (Total Daily Energy Expenditure), ou Gasto Energético Diário
+            Total, é uma medida que representa a quantidade de calorias que um
+            indivíduo queima em um dia, levando em consideração suas atividades
+            diárias, metabolismo basal e exercícios físicos.
+          </p>
+        </div>
         <form action="" class="form-bg" id="form">
-          <div class="border-form">
-            <div class="tdee-content">
-              <div class="col-1">
-                <div class="input-container">
-                  <label for="weight">Peso em KG</label>
-                  <input type="number" name="weight" value="" id="weight" aria-label="Campo peso em quilos"/>
-                </div>
-                <div class="input-container">
-                  <label for="height">Altura em CM</label>
-                  <input type="number" name="height" value="" id="height" aria-label="Campo altura em centímetros"/>
-                </div>
-                <div class="input-container">
-                  <label for="age">Idade</label>
-                  <input type="number" name="age" value="" id="age" aria-label="Campo idade"/>
-                </div>
-                <button class="btn-result" type="submit" aria-label="Botão calcular TDEE">calcular</button>
-                <button class="btn-reset" type="reset" aria-label="Botão limpar formulário">limpar</button>
+          <div class="tdee-content">
+            <div class="col-1">
+              <div class="input-container">
+                <label for="weight">Peso em KG</label>
+                <input
+                  type="number"
+                  name="weight"
+                  value=""
+                  id="weight"
+                  aria-label="Campo peso em quilos"
+                />
               </div>
-              <div class="col-2">
-                <div class="radio-container">
-                  <input
-                    type="radio"
-                    class="radio-input"
-                    name="sex"
-                    id="radio-m"
-                    value="M"
-                    aria-label="Campo de genêro: masculino"
-                  />
-                  <label class="radio-image" for="radio-m">
-                    <img src="images/man_2922721.png" alt="Masculino" />
-                  </label>
-                  <input
-                    type="radio"
-                    class="radio-input"
-                    name="sex"
-                    id="radio-f"
-                    value="F"
-                    aria-label="Campo de genêro: feminino"
-                  />
-                  <label class="radio-image" for="radio-f">
-                    <img src="images/woman_2922579.png" alt="Feminino" />
-                  </label>
-                </div>
-                <label for="options">Nível de atividade física</label>
-                <select id="activity" name="options" aria-label="Selecione o seu nível de atividade física">
-                  <option>Sedentário</option>
-                  <option>Levemente ativo</option>
-                  <option>Moderamente ativo</option>
-                  <option>Muito ativo</option>
-                  <option>Extremamente ativo</option>
-                </select>
-                <p id="calories-text">Você precisa de 0000 calorias por dia.</p>
+              <div class="input-container">
+                <label for="height">Altura em CM</label>
+                <input
+                  type="number"
+                  name="height"
+                  value=""
+                  id="height"
+                  aria-label="Campo altura em centímetros"
+                />
               </div>
+              <div class="input-container">
+                <label for="age">Idade</label>
+                <input
+                  type="number"
+                  name="age"
+                  value=""
+                  id="age"
+                  aria-label="Campo idade"
+                />
+              </div>
+              <button
+                class="btn-result"
+                type="submit"
+                aria-label="Botão calcular TDEE"
+              >
+                calcular
+              </button>
+              <button
+                class="btn-reset"
+                type="reset"
+                aria-label="Botão limpar formulário"
+              >
+                limpar
+              </button>
+            </div>
+            <div class="col-2">
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  class="radio-input"
+                  name="sex"
+                  id="radio-m"
+                  value="M"
+                  aria-label="Campo de genêro: masculino"
+                />
+                <label class="radio-image" for="radio-m">
+                  <img src="images/man_2922721.png" alt="Masculino" />
+                </label>
+                <input
+                  type="radio"
+                  class="radio-input"
+                  name="sex"
+                  id="radio-f"
+                  value="F"
+                  aria-label="Campo de genêro: feminino"
+                />
+                <label class="radio-image" for="radio-f">
+                  <img src="images/woman_2922579.png" alt="Feminino" />
+                </label>
+              </div>
+              <label for="options">Nível de atividade física</label>
+              <select
+                id="activity"
+                name="options"
+                aria-label="Selecione o seu nível de atividade física"
+              >
+                <option>Sedentário</option>
+                <option>Levemente ativo</option>
+                <option>Moderamente ativo</option>
+                <option>Muito ativo</option>
+                <option>Extremamente ativo</option>
+              </select>
+              <p id="calories-text">Você precisa de 0000 calorias por dia.</p>
             </div>
           </div>
         </form>
       </div>
     </main>
+
+    <section class="limitations-bg">
+      <div class="container limitations-title">
+        <div>
+          <h2>Limitações</h2>
+          <p>
+            Embora o TDEE seja uma ferramenta útil para orientar o planejamento
+            alimentar e a gestão do peso, ele também apresenta algumas
+            limitações que devem ser consideradas:
+          </p>
+        </div>
+        <div class="limitations-list first">
+          <div class="limitatons-subtitle">
+            <i class="bi bi-search"></i>
+            <span>Estimativas</span>
+          </div>
+          <p>
+            O cálculo do TDEE é baseado em fórmulas matemáticas que usam valores
+            médios para estimar o gasto calórico. Isso significa que as
+            estimativas podem não ser precisas para todas as pessoas,
+            especialmente aquelas com metabolismo único ou condições médicas
+            específicas.
+          </p>
+        </div>
+      </div>
+      <div class="limitations-content-end container">
+        <div class="limitations-list">
+          <div class="limitatons-subtitle">
+            <i class="bi bi-activity"></i>
+            <span>Variações</span>
+          </div>
+          <p>
+            Não considera as variações individuais, como a eficiência metabólica
+            de cada pessoa, genética, hormônios e outras influências biológicas.
+            Duas pessoas com características semelhantes ainda podem ter
+            respostas diferentes às mesmas estimativas de TDEE.
+          </p>
+        </div>
+        <div class="limitations-list">
+          <div class="limitatons-subtitle">
+            <i class="bi bi-exclamation-lg"></i>
+            <span>Mudanças</span>
+          </div>
+          <p>
+            O TDEE pode mudar ao longo do tempo devido a fatores como
+            envelhecimento, alterações na composição corporal e níveis de
+            atividade. Isso significa que as estimativas podem precisar de
+            ajustes regulares para permanecerem precisas.
+          </p>
+        </div>
+      </div>
+      <div class="limitations-content-center container">
+        <div class="limitations-list">
+          <div class="limitatons-subtitle">
+            <i class="bi bi-person-fill"></i>
+            <span>Composição Corporal</span>
+          </div>
+          <p>
+            O tecido muscular consome mais calorias em repouso do que o tecido
+            adiposo. Portanto, o TDEE de uma pessoa com maior massa muscular
+            será maior do que o de alguém com uma proporção semelhante de peso,
+            mas com menos músculo.
+          </p>
+        </div>
+        <div class="limitations-list">
+          <div class="limitatons-subtitle">
+            <i class="bi bi-lightning"></i>
+            <span>Metabolismo Adaptativo</span>
+          </div>
+          <p>
+            Quando alguém faz uma dieta restritiva por um longo período, o
+            metabolismo pode diminuir em resposta à restrição calórica
+            prolongada. Isso pode levar a uma redução no TDEE, tornando a perda
+            de peso mais difícil.
+          </p>
+        </div>
+      </div>
+    </section>
     <script src="js/script.js"></script>
   </body>
 </html>

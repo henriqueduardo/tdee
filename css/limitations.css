@@ -1,0 +1,97 @@
+.limitations-bg {
+  width: 100%;
+  height: auto;
+}
+
+.limitations-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.limitations-title h2 {
+  font-size: 58px;
+  color: #212121;
+  margin-bottom: 40px;
+}
+
+.limitations-title p {
+  width: 550px;
+  font-size: 18px;
+  color: #4f4d52;
+}
+
+.limitations-list {
+  max-width: 425px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.limitations-list.first {
+  margin-right: 100px;
+}
+
+.limitatons-subtitle {
+  display: flex;
+  align-items: center;
+}
+
+.limitations-list span {
+  color: #212121;
+  font-size: 22px;
+  font-weight: 700;
+  margin-left: 20px;
+}
+
+.limitations-list p {
+  max-width: 100%;
+  color: #4f4d52;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.bi {
+  font-size: 16px;
+  padding: 16px;
+  border-radius: 2rem;
+}
+
+.limitations-content-end {
+  padding-top: 0px !important;
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+}
+
+.limitations-content-center {
+  padding-top: 0px !important;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.bi.bi-search {
+  color: #ff084a;
+  background: #ff93ac;
+}
+
+.bi.bi-activity {
+  color: #68BB59;
+  background: #ACDF87;
+}
+
+.bi.bi-exclamation-lg {
+  color: #BE29EC;
+  background: #D896FF;
+}
+
+.bi.bi-person-fill {
+  color: #005B96;
+  background: #6497B1;
+}
+
+.bi.bi-lightning {
+  color: #E9D700;
+  background: #F8ED62;
+}
