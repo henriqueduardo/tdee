@@ -16,33 +16,39 @@ function calculateTDEE(event) {
   const heightValue = parseFloat(height.value);
   const ageValue = parseFloat(age.value);
 
+  // obj com valores p calculo de acordo com o genero (TMB)
+  const genderValues = {
+    male: { a: 88.362, b: 13.397, c: 4.799, d: 5.677 },
+    female: { a: 447.593, b: 9.247, c: 3.098, d: 4.330 }
+  };
+
   let tmb = 0;
 
-  // realizar o calculo de acordo com o genero (TMB)
-  if (male.checked) {
-    tmb = 88.362 + (13.397 * weightValue) + (4.799 * heightValue) - (5.677 * ageValue);
-  } else if (female.checked) {
-    tmb = 447.593 + (9.247 * weightValue) + (3.098 * heightValue) - (4.330 * ageValue);
-  }
+  // verificar e obter o genero selecionado
+  const selectedGender = male.checked ? "male" : "female";
+  const genderData = genderValues[selectedGender];
 
-  const activyValue = activy.value;
+  // realizar o calculo de acordo com o genero (TMB) atraves das propriedades
+  tmb = genderData.a + (genderData.b * weightValue) + (genderData.c * heightValue) - (genderData.d * ageValue);
+
+  // obj com valores de niveis de ativ fisica
+  const activityValues = {
+    "Sedentário": 1.2,
+    "Levemente ativo": 1.375,
+    "Moderamente ativo": 1.55,
+    "Muito ativo": 1.725,
+    "Extremamente ativo": 1.9
+  };
 
   let tdee = 0;
 
-  // realizar o calculo de acordo com o nivel de ativ fisica (TDEE)
-  if (activyValue === "Sedentário") {
-    tdee = tmb * 1.2;
-  } else if (activyValue === "Levemente ativo") {
-    tdee = tmb * 1.375;
-  } else if (activyValue === "Moderamente ativo") {
-    tdee = tmb * 1.55;
-  } else if (activyValue === "Muito ativo") {
-    tdee = tmb * 1.725;
-  } else if (activyValue === "Extremamente ativo") {
-    tdee = tmb * 1.9;
-  }
+  // obter o valor selecionado
+  const activityValue = activy.value;
 
-  // exibir e arredondar o resultado
+  // realizar o calculo de acordo com o nivel de ativ fisica (TDEE)
+  tdee = tmb * activityValues[activityValue];
+
+  // exibir e arredondar o resultado 
   calories.textContent = `Você precisa de ${tdee.toFixed(0)} calorias por dia.`;
   console.log(tdee);
 }
