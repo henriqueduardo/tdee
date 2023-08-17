@@ -10,21 +10,21 @@
     <main class="hero-bg">
       <div class="hero-content">
         <h1 class="title">Calculadora TDEE</h1>
-        <form action="" class="form-bg">
+        <form action="" class="form-bg" id="form">
           <div class="border-form">
             <div class="tdee-content">
               <div class="col-1">
                 <div class="input-container">
                   <label for="weight">Peso em KG</label>
-                  <input type="text" name="weight" value="" />
+                  <input type="number" name="weight" value="" id="weight" />
                 </div>
                 <div class="input-container">
                   <label for="height">Altura em CM</label>
-                  <input type="number" name="height" value="" />
+                  <input type="number" name="height" value="" id="height" />
                 </div>
                 <div class="input-container">
                   <label for="age">Idade</label>
-                  <input type="number" name="age" value="" />
+                  <input type="number" name="age" value="" id="age" />
                 </div>
                 <button class="btn-result" type="submit">calcular</button>
                 <button class="btn-reset" type="reset">limpar</button>
@@ -52,25 +52,21 @@
                     <img src="images/woman_2922579.png" alt="Feminino" />
                   </label>
                 </div>
-                <label for="options">Objetivo</label>
-                <select id="options">
-                  <option value="">Emagrecer</option>
-                  <option value="">Manter peso</option>
-                  <option value="">Ganhar peso</option>
-                </select>
                 <label for="options">Nível de atividade física</label>
-                <select id="options">
-                  <option value="">Sedentário</option>
-                  <option value="">Levemente ativo</option>
-                  <option value="">Moderamente ativo</option>
-                  <option value="">Muito ativo</option>
-                  <option value="">Extremamente ativo</option>
+                <select id="activity">
+                  <option value="Sedentário">Sedentário</option>
+                  <option value="Levemente ativo">Levemente ativo</option>
+                  <option value="Moderamente ativo">Moderamente ativo</option>
+                  <option value="Muito ativo">Muito ativo</option>
+                  <option value="Extremamente ativo">Extremamente ativo</option>
                 </select>
+                <p id="calories-text">Você precisa de 0000 calorias por dia.</p>
               </div>
             </div>
           </div>
         </form>
       </div>
     </main>
+    <script src="js/script.js"></script>
   </body>
 </html>

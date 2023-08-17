@@ -82,7 +82,7 @@ input {
   transition: border-color 0.3s;
 }
 
-#options {
+#options, #activity {
   padding: 6px 12px;
   background: #fff;
   color: black;
