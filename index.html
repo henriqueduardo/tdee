@@ -16,18 +16,18 @@
               <div class="col-1">
                 <div class="input-container">
                   <label for="weight">Peso em KG</label>
-                  <input type="number" name="weight" value="" id="weight" />
+                  <input type="number" name="weight" value="" id="weight" aria-label="Campo peso em quilos"/>
                 </div>
                 <div class="input-container">
                   <label for="height">Altura em CM</label>
-                  <input type="number" name="height" value="" id="height" />
+                  <input type="number" name="height" value="" id="height" aria-label="Campo altura em centímetros"/>
                 </div>
                 <div class="input-container">
                   <label for="age">Idade</label>
-                  <input type="number" name="age" value="" id="age" />
+                  <input type="number" name="age" value="" id="age" aria-label="Campo idade"/>
                 </div>
-                <button class="btn-result" type="submit">calcular</button>
-                <button class="btn-reset" type="reset">limpar</button>
+                <button class="btn-result" type="submit" aria-label="Botão calcular TDEE">calcular</button>
+                <button class="btn-reset" type="reset" aria-label="Botão limpar formulário">limpar</button>
               </div>
               <div class="col-2">
                 <div class="radio-container">
@@ -37,6 +37,7 @@
                     name="sex"
                     id="radio-m"
                     value="M"
+                    aria-label="Campo de genêro: masculino"
                   />
                   <label class="radio-image" for="radio-m">
                     <img src="images/man_2922721.png" alt="Masculino" />
@@ -47,13 +48,14 @@
                     name="sex"
                     id="radio-f"
                     value="F"
+                    aria-label="Campo de genêro: feminino"
                   />
                   <label class="radio-image" for="radio-f">
                     <img src="images/woman_2922579.png" alt="Feminino" />
                   </label>
                 </div>
                 <label for="options">Nível de atividade física</label>
-                <select id="activity" name="options">
+                <select id="activity" name="options" aria-label="Selecione o seu nível de atividade física">
                   <option>Sedentário</option>
                   <option>Levemente ativo</option>
                   <option>Moderamente ativo</option>
