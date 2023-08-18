@@ -5,6 +5,10 @@ let weight = document.getElementById("weight");
 let height = document.getElementById("height");
 let age = document.getElementById("age");
 let calories = document.getElementById("calories-text");
+let basal = document.getElementById("basal-text");
+let imcText = document.getElementById("imc-text");
+let lossWeightText = document.getElementById("loss-text");
+let gainWeightText = document.getElementById("gain-text");
 
 const form = document.getElementById("form");
 
@@ -16,10 +20,16 @@ function calculateTDEE(event) {
   const heightValue = parseFloat(height.value);
   const ageValue = parseFloat(age.value);
 
+  // converter a altura de cm para metros
+  const heightInMeters = heightValue / 100;
+
+  // calculo imc
+  const imc = weightValue / (heightInMeters * heightInMeters);
+
   // obj com valores p calculo de acordo com o genero (TMB)
   const genderValues = {
-    male: { a: 88.362, b: 13.397, c: 4.799, d: 5.677 },
-    female: { a: 447.593, b: 9.247, c: 3.098, d: 4.330 }
+    male: { a: 10, b: 6.25, c: 5, d: 5 },
+    female: { a: 10, b: 6.25, c: 5, d: 161 }
   };
 
   let tmb = 0;
@@ -28,8 +38,8 @@ function calculateTDEE(event) {
   const selectedGender = male.checked ? "male" : "female";
   const genderData = genderValues[selectedGender];
 
-  // realizar o calculo de acordo com o genero (TMB) atraves das propriedades
-  tmb = genderData.a + (genderData.b * weightValue) + (genderData.c * heightValue) - (genderData.d * ageValue);
+  // realizar o calculo de acordo com o genero (TMB) atraves das propriedades (mifflin st jeor)
+  tmb = (genderData.a * weightValue) + (genderData.b * heightValue) - (genderData.c * ageValue) + genderData.d;
 
   // obj com valores de niveis de ativ fisica
   const activityValues = {
@@ -48,8 +58,24 @@ function calculateTDEE(event) {
   // realizar o calculo de acordo com o nivel de ativ fisica (TDEE)
   tdee = tmb * activityValues[activityValue];
 
-  // exibir e arredondar o resultado 
-  calories.textContent = `Você precisa de ${tdee.toFixed(0)} calorias por dia.`;
+  // perder ou ganhar peso
+  lossWeight = tdee - 425;
+  gainWeight = tdee + 425;
+
+  // tde - exibir e arredondar o resultados
+  calories.textContent = `${tdee.toFixed(0)}`;
+
+  // tmb
+  basal.textContent = `${tmb.toFixed(0)}`;
+
+  // imc
+  imcText.textContent = `${imc.toFixed(2)}`;
+
+  // perder peso
+  lossWeightText.textContent = `${lossWeight.toFixed(0)}`;
+
+  // ganhar peso
+  gainWeightText.textContent = `${gainWeight.toFixed(0)}`;
   console.log(tdee);
 }
 
